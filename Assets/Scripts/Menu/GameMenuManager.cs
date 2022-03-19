@@ -8,11 +8,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class PauseMenu : MonoBehaviour {
+public class GameMenuManager : MonoBehaviour {
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public TextMeshProUGUI scoreUI;
+    public TMP_InputField inputNameUI;
+
+    private float score;
+    private void Start()
+    {
+        score = 0;
+        scoreUI.text = $"Score: {score}";
+    }
 
     // Pausing/resuming the game through the use of the escape key
     private void Update() {
@@ -23,6 +33,8 @@ public class PauseMenu : MonoBehaviour {
                 Pause();
             }
         }
+        score += Time.deltaTime * 10;
+        scoreUI.text = $"Score: {(int)score}";
     }
 
     // Resuming ensures the game returns to normal speed
@@ -47,5 +59,21 @@ public class PauseMenu : MonoBehaviour {
 
     public void ExitGame() {
         Application.Quit();
-     }
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
+    // TODO: Make the player lose
+    // At the momment no name means don't save
+    public void EndGame()
+    {
+        if (inputNameUI.text != "")
+        {
+            ScoreData.storeHighScore(inputNameUI.text, (int)score);
+        }
+        SceneManager.LoadScene(2);
+        Resume();
+    }
+
 }

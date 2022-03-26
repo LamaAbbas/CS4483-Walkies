@@ -7,6 +7,9 @@ TagManager:
   - Left
   - Right
   - Head
+  - HeavyObstacle
+  - NimbleObstacle
+  - Obstacle
   layers:
   - Default
   - TransparentFX

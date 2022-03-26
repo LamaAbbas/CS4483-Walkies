@@ -22,6 +22,18 @@ public class Dog : MonoBehaviour {
         dog = GetComponent<Rigidbody>();
     }
 
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == "HeavyObstacle" && isNimble()) {
+            Debug.Log("GameOver1");
+        } 
+        if (other.tag == "LightObstacle" && !isNimble()) {
+            Debug.Log("GameOver2");
+        } 
+        if (other.tag == "Obstacle") {
+            Debug.Log("GameOver3");
+        }
+    }
+
     private void Update() {
         // Constant speed 
         transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);

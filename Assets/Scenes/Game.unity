@@ -12727,6 +12727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1327385724211766, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4905684144481780, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
       propertyPath: m_RootOrder
       value: 5

@@ -6,6 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dog : MonoBehaviour {
 
@@ -20,6 +21,12 @@ public class Dog : MonoBehaviour {
 
     private void Awake() {
         dog = GetComponent<Rigidbody>();
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if ((other.tag == "HeavyObstacle" && isNimble()) || (other.tag == "LightObstacle" && !isNimble()) || (other.tag == "Obstacle")) {
+            SceneManager.LoadScene(3);  
+        }
     }
 
     private void Update() {

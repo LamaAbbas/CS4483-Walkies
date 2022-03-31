@@ -19,6 +19,8 @@ public class GameMenuManager : MonoBehaviour {
     private string nameSubstring;
 
     public static float score;
+
+    public float scoreModifier = 1;
     private void Start()
     {
         score = 0;
@@ -34,7 +36,7 @@ public class GameMenuManager : MonoBehaviour {
                 Pause();
             }
         }
-        score += Time.deltaTime * 10;
+        score += Time.deltaTime * 10 * scoreModifier;
         scoreUI.text = $"Score: {(int)score}";
     }
 

@@ -16,6 +16,7 @@ public class Leash : MonoBehaviour {
 
     // The dog that is attached to this leash
     [SerializeField] private Dog Dog;
+    private Transform Neck;
     private LineRenderer lineRenderer;
 
     // Whether the dog walker should get pulled or not
@@ -26,6 +27,7 @@ public class Leash : MonoBehaviour {
 
     private void Start() {
         lineRenderer = GetComponent<LineRenderer>();
+        Neck = Dog.transform.Find("Neck");
     }
 
     private void Update() {
@@ -36,7 +38,9 @@ public class Leash : MonoBehaviour {
             lineRenderer.SetPosition(0, GameObject.FindGameObjectWithTag("Right").transform.position);
         }
         // Attaching the other end of the leash to the dog
-        lineRenderer.SetPosition(1, Dog.transform.localPosition);
+        if (Neck != null) {
+            lineRenderer.SetPosition(1, Neck.position);
+        }
 
         // Calculating the current length of the leash, and determining pull necessity with the direction
         float length = (lineRenderer.GetPosition(1) - lineRenderer.GetPosition(0)).magnitude;

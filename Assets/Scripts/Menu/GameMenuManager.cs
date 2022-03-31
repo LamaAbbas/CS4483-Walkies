@@ -18,7 +18,7 @@ public class GameMenuManager : MonoBehaviour {
     public TMP_InputField inputNameUI;
     private string nameSubstring;
 
-    private float score;
+    public static float score;
 
     public float scoreModifier = 1;
     private void Start()
@@ -73,7 +73,11 @@ public class GameMenuManager : MonoBehaviour {
     {
         if (inputNameUI.text != "")
         {
-            nameSubstring = inputNameUI.text.Substring(0, 3).ToUpper();
+            if (inputNameUI.text.Length > 6) {
+                nameSubstring = inputNameUI.text.Substring(0, 6);
+            } else {
+                nameSubstring = inputNameUI.text;
+            }
             ScoreData.storeHighScore(nameSubstring, (int)score);
         }
         SceneManager.LoadScene(2);

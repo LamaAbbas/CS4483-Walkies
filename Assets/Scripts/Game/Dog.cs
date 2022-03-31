@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class Dog : MonoBehaviour {
 
     private Rigidbody dog;
+    private Animator anim;
     [SerializeField] private float speed;
     [SerializeField] private float forwardSpeed;
 
@@ -25,6 +26,7 @@ public class Dog : MonoBehaviour {
 
     private void Awake() {
         dog = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
         hasShield = false;
         forwardSpeed = speed;
     }
@@ -35,11 +37,13 @@ public class Dog : MonoBehaviour {
                 hasShield = false;
                 transform.Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
             } // end if
-            else
-                SceneManager.LoadScene(3);  
+            else {
+                SceneManager.LoadScene(3); 
+            } 
         }
-        else if(other.tag == "PowerUp")
+        else if(other.tag == "PowerUp") {
             other.gameObject.GetComponent<PowerUp>().ActivatePowerup(this.gameObject);
+        }
     }
     public void setSpeed(float _speed){
         speed = _speed;
@@ -53,6 +57,7 @@ public class Dog : MonoBehaviour {
             if (Input.GetKey(KeyCode.A)) {
                 if (this.gameObject.transform.position.x > LevelBoundary.leftSide) {
                     transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
+                    //dog.AddForce(Vector3.left * horizontalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.D)) {

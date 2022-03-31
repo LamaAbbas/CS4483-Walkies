@@ -37,7 +37,8 @@ public class Dog : MonoBehaviour {
             // The keys that control the dog and remaining within the boundaries
             if (Input.GetKey(KeyCode.A)) {
                 if (this.gameObject.transform.position.x > LevelBoundary.leftSide) {
-                    transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
+                    //transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
+                    //dog.AddForce(Vector3.left * horizontalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.D)) {

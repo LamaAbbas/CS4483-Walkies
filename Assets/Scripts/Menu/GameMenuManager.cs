@@ -18,7 +18,7 @@ public class GameMenuManager : MonoBehaviour {
     public TMP_InputField inputNameUI;
     private string nameSubstring;
 
-    private float score;
+    public static float score;
     private void Start()
     {
         score = 0;

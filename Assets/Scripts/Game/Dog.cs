@@ -12,6 +12,8 @@ public class Dog : MonoBehaviour {
 
     private Rigidbody dog;
     [SerializeField] private float speed;
+    [SerializeField] private float forwardSpeed;
+
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float verticalSpeed;
 
@@ -19,19 +21,32 @@ public class Dog : MonoBehaviour {
     [SerializeField] private bool Nimble;
     [SerializeField] private bool Heavy;
 
+    [SerializeField] public bool hasShield;
+
     private void Awake() {
         dog = GetComponent<Rigidbody>();
+        hasShield = false;
+        forwardSpeed = speed;
     }
 
     private void OnTriggerEnter(Collider other) {
         if ((other.tag == "HeavyObstacle" && isNimble()) || (other.tag == "LightObstacle" && !isNimble()) || (other.tag == "Obstacle")) {
-            SceneManager.LoadScene(3);  
+            if(hasShield){
+                hasShield = false;
+                transform.Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
+            } // end if
+            else
+                SceneManager.LoadScene(3);  
         }
+        else if(other.tag == "PowerUp")
+            other.gameObject.GetComponent<PowerUp>().ActivatePowerup(this.gameObject);
     }
-
+    public void setSpeed(float _speed){
+        speed = _speed;
+    } // end method
     private void Update() {
         // Constant speed 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
+        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);
 
         if (Nimble) {
             // The keys that control the dog and remaining within the boundaries

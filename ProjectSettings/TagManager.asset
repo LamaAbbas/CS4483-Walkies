@@ -10,6 +10,8 @@ TagManager:
   - HeavyObstacle
   - NimbleObstacle
   - Obstacle
+  - PowerUp
+  - PowerUpSpawner
   layers:
   - Default
   - TransparentFX

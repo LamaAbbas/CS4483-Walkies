@@ -71,7 +71,11 @@ public class GameMenuManager : MonoBehaviour {
     {
         if (inputNameUI.text != "")
         {
-            nameSubstring = inputNameUI.text.Substring(0, 3).ToUpper();
+            if (inputNameUI.text.Length > 6) {
+                nameSubstring = inputNameUI.text.Substring(0, 6);
+            } else {
+                nameSubstring = inputNameUI.text;
+            }
             ScoreData.storeHighScore(nameSubstring, (int)score);
         }
         SceneManager.LoadScene(2);

@@ -4,10 +4,14 @@ using TMPro;
 
 public class GameOver : MonoBehaviour {
 
-    [SerializeField] private TextMeshProUGUI score;
+    [SerializeField] private TextMeshProUGUI scoreUI;
+    public TMP_InputField inputNameUI;
+    private string nameSubstring;
+    private int score; 
 
     private void Start() {
-        score.text = ((int)GameMenuManager.score).ToString();
+        score = (int)GameMenuManager.score;
+        scoreUI.text = score.ToString();
     }
 
     public void MainMenu() {
@@ -19,6 +23,14 @@ public class GameOver : MonoBehaviour {
     }
 
     public void ViewLeaderboard() {
+        if (inputNameUI.text != "") {
+            if (inputNameUI.text.Length > 6) {
+                nameSubstring = inputNameUI.text.Substring(0, 6);
+            } else {
+                nameSubstring = inputNameUI.text;
+            }
+            ScoreData.storeHighScore(nameSubstring, score);
+        }
         SceneManager.LoadScene(2);
     }
 }

@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class Dog : MonoBehaviour {
 
     private Rigidbody dog;
+    private Animator anim;
     [SerializeField] private float speed;
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float verticalSpeed;
@@ -21,12 +22,17 @@ public class Dog : MonoBehaviour {
 
     private void Awake() {
         dog = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other) {
         if ((other.tag == "HeavyObstacle" && isNimble()) || (other.tag == "LightObstacle" && !isNimble()) || (other.tag == "Obstacle")) {
             SceneManager.LoadScene(3);  
-        }
+        } //else if (other.tag == "HeavyObstacle") {
+            //anim.SetTrigger("dash");
+        //} else {
+            //anim.SetTrigger("jump");
+        //}
     }
 
     private void Update() {

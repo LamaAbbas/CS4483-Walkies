@@ -26,28 +26,38 @@ public class Dog : MonoBehaviour {
 
     private void Awake() {
         dog = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         hasShield = false;
         forwardSpeed = speed;
     }
 
     private void OnTriggerEnter(Collider other) {
-        if ((other.tag == "HeavyObstacle" && isNimble()) || (other.tag == "LightObstacle" && !isNimble()) || (other.tag == "Obstacle")) {
+        
+        if ((other.tag == "HeavyObstacle" && isNimble()) || (other.tag == "NimbleObstacle" && !isNimble()) || (other.tag == "Obstacle")) {
             if(hasShield){
                 hasShield = false;
                 transform.GetChild(0).Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
             } // end if
             else {
-                SceneManager.LoadScene(3); 
+                //SceneManager.LoadScene(3); 
             } 
         }
         else if(other.tag == "PowerUp") {
             other.gameObject.GetComponent<PowerUp>().ActivatePowerup(this.gameObject);
+        } else if (other.tag == "NimbleObstacle" && isNimble()) {
+            anim.SetTrigger("jump");
+        } else if (other.tag == "HeavyObstacle" && !isNimble()) {
+            Debug.Log("me");
+            anim.SetTrigger("dash");
         }
     }
+
+    
+
     public void setSpeed(float _speed){
         speed = _speed;
     } // end method
+
     private void FixedUpdate() {
         // Constant speed 
         //transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);

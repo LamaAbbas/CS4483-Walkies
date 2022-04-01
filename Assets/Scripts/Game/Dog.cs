@@ -40,7 +40,7 @@ public class Dog : MonoBehaviour {
         if ((other.tag == "HeavyObstacle" && isNimble()) || (other.tag == "NimbleObstacle" && !isNimble()) || (other.tag == "Obstacle")) {
             if(hasShield){
                 hasShield = false;
-                transform.GetChild(0).Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
+                transform.GetChild(0).GetChild(1).Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
             } // end if
             else {
                 SceneManager.LoadScene(3); 

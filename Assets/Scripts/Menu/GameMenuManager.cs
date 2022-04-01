@@ -49,6 +49,7 @@ public class GameMenuManager : MonoBehaviour {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        AudioListener.volume = 1;
     }
 
     // Pausing ensures the game is frozen and brings up the pause menu
@@ -56,6 +57,7 @@ public class GameMenuManager : MonoBehaviour {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        AudioListener.volume = 0.2f;
     }
 
     // Actions delivered via pause menu

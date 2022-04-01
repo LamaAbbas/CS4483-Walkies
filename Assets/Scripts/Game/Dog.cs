@@ -39,7 +39,7 @@ public class Dog : MonoBehaviour {
                 transform.GetChild(0).Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
             } // end if
             else {
-                //SceneManager.LoadScene(3); 
+                SceneManager.LoadScene(3); 
             } 
         }
         else if(other.tag == "PowerUp") {
@@ -47,7 +47,6 @@ public class Dog : MonoBehaviour {
         } else if (other.tag == "NimbleObstacle" && isNimble()) {
             anim.SetTrigger("jump");
         } else if (other.tag == "HeavyObstacle" && !isNimble()) {
-            Debug.Log("me");
             anim.SetTrigger("dash");
         }
     }

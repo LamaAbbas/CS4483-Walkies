@@ -35,7 +35,7 @@ public class Dog : MonoBehaviour {
         if ((other.tag == "HeavyObstacle" && isNimble()) || (other.tag == "LightObstacle" && !isNimble()) || (other.tag == "Obstacle")) {
             if(hasShield){
                 hasShield = false;
-                transform.Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
+                transform.GetChild(0).Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
             } // end if
             else {
                 SceneManager.LoadScene(3); 
@@ -48,53 +48,63 @@ public class Dog : MonoBehaviour {
     public void setSpeed(float _speed){
         speed = _speed;
     } // end method
-    private void Update() {
+    private void FixedUpdate() {
         // Constant speed 
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);
+        //transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);
+        //dog.AddForce(Vector3.forward * speed, ForceMode.VelocityChange);
 
         if (Nimble) {
             // The keys that control the dog and remaining within the boundaries
             if (Input.GetKey(KeyCode.A)) {
                 if (this.gameObject.transform.position.x > LevelBoundary.leftSide) {
-                    transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
-                    //dog.AddForce(Vector3.left * horizontalSpeed);
+                    //transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
+                    dog.AddForce(Vector3.left * horizontalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.D)) {
                 if (this.gameObject.transform.position.x < LevelBoundary.rightSide) {
-                    transform.Translate(Vector3.left * Time.deltaTime * -horizontalSpeed);
+                    //transform.Translate(Vector3.left * Time.deltaTime * -horizontalSpeed);
+                    dog.AddForce(Vector3.left * -horizontalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.W)) {
                 if (this.gameObject.transform.position.z < LevelScroller.topSide) {
-                    transform.Translate(Vector3.forward * Time.deltaTime * verticalSpeed);
+                    //transform.Translate(Vector3.forward * Time.deltaTime * verticalSpeed);
+                    dog.AddForce(Vector3.forward * verticalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.S)) {
                 if (this.gameObject.transform.position.z > LevelScroller.bottomSide) {
-                    transform.Translate(Vector3.forward * Time.deltaTime * -verticalSpeed);
+                    //transform.Translate(Vector3.forward * Time.deltaTime * -verticalSpeed);
+                    dog.AddForce(Vector3.forward * -verticalSpeed);
                 }
             }
-        } else if (Heavy) {
+        } 
+        
+        if (Heavy) {
 
             if (Input.GetKey(KeyCode.LeftArrow)) {
                 if (this.gameObject.transform.position.x > LevelBoundary.leftSide) {
-                    transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
+                    //transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
+                    dog.AddForce(Vector3.left * horizontalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.RightArrow)) {
                 if (this.gameObject.transform.position.x < LevelBoundary.rightSide) {
-                    transform.Translate(Vector3.left * Time.deltaTime * -horizontalSpeed);
+                    //transform.Translate(Vector3.left * Time.deltaTime * -horizontalSpeed);
+                    dog.AddForce(Vector3.left * -horizontalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.UpArrow)) {
                 if (this.gameObject.transform.position.z < LevelScroller.topSide) {
-                    transform.Translate(Vector3.forward * Time.deltaTime * verticalSpeed);
+                    //transform.Translate(Vector3.forward * Time.deltaTime * verticalSpeed);
+                    dog.AddForce(Vector3.forward * verticalSpeed);
                 }
             }
             if (Input.GetKey(KeyCode.DownArrow)) {
                 if (this.gameObject.transform.position.z > LevelScroller.bottomSide) {
-                    transform.Translate(Vector3.forward * Time.deltaTime * -verticalSpeed);
+                    //transform.Translate(Vector3.forward * Time.deltaTime * -verticalSpeed);
+                    dog.AddForce(Vector3.forward * -verticalSpeed);
                 }
             }
         }

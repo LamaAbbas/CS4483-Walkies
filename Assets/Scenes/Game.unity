@@ -253,6 +253,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1792736681}
     m_Modifications:
+    - target: {fileID: 1255348648010894, guid: 5aa09168234dce04fb87af766863e32b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1391932766815858, guid: 5aa09168234dce04fb87af766863e32b, type: 3}
       propertyPath: m_Name
       value: road traffic sign
@@ -1283,6 +1287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1013461262}
     m_Modifications:
+    - target: {fileID: 1650494531970616, guid: b0c71b64a7dfbd74cb2f2acf7a3637a3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1902530880653180, guid: b0c71b64a7dfbd74cb2f2acf7a3637a3, type: 3}
       propertyPath: m_Name
       value: traffic_obj prefab (1)
@@ -1619,6 +1627,10 @@ PrefabInstance:
     - target: {fileID: 1728021843066244, guid: 6f68dfcded674364f8b137702c42898e, type: 3}
       propertyPath: m_Name
       value: stop sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728021843066244, guid: 6f68dfcded674364f8b137702c42898e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1917863534017386, guid: 6f68dfcded674364f8b137702c42898e, type: 3}
       propertyPath: m_TagString
@@ -2762,6 +2774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: The fence (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3901,6 +3917,10 @@ PrefabInstance:
     - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_Name
       value: The fence (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
@@ -7540,7 +7560,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ce8a5c2635b57314f94494aa4d33e1d1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7800,6 +7820,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 545792727}
     m_Modifications:
+    - target: {fileID: 1650494531970616, guid: b0c71b64a7dfbd74cb2f2acf7a3637a3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1902530880653180, guid: b0c71b64a7dfbd74cb2f2acf7a3637a3, type: 3}
       propertyPath: m_Name
       value: traffic_obj prefab
@@ -10324,7 +10348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_TagString
-      value: HeavyObstacle
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
@@ -10619,6 +10643,10 @@ PrefabInstance:
       value: Parking_barrier prefab
       objectReference: {fileID: 0}
     - target: {fileID: 1087036404678156, guid: a560b249e984af144b222ea1d93fe697, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984630016570690, guid: a560b249e984af144b222ea1d93fe697, type: 3}
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
@@ -10996,6 +11024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone 3 Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1713973710326492, guid: 5d51484289d125e48b3eecf5fbd4d7c9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4231348148320386, guid: 5d51484289d125e48b3eecf5fbd4d7c9, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -11361,6 +11393,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 1984630016570690, guid: a560b249e984af144b222ea1d93fe697, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4061960552898642, guid: a560b249e984af144b222ea1d93fe697, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -11573,6 +11609,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1013461262}
     m_Modifications:
+    - target: {fileID: 1650494531970616, guid: b0c71b64a7dfbd74cb2f2acf7a3637a3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1902530880653180, guid: b0c71b64a7dfbd74cb2f2acf7a3637a3, type: 3}
       propertyPath: m_Name
       value: traffic_obj prefab
@@ -15179,6 +15219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot
       objectReference: {fileID: 0}
+    - target: {fileID: 172682, guid: 12657aa39e8b64040961be7c58d7330c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 445942, guid: 12657aa39e8b64040961be7c58d7330c, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -15465,6 +15509,10 @@ PrefabInstance:
     - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_Name
       value: The fence (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
@@ -16658,6 +16706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: The fence (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -16963,6 +17015,10 @@ PrefabInstance:
       value: stop sign
       objectReference: {fileID: 0}
     - target: {fileID: 1728021843066244, guid: 6f68dfcded674364f8b137702c42898e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917863534017386, guid: 6f68dfcded674364f8b137702c42898e, type: 3}
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
@@ -17331,6 +17387,10 @@ PrefabInstance:
     - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_Name
       value: The fence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
@@ -17968,6 +18028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 965152289}
     m_Modifications:
+    - target: {fileID: 1616702537201082, guid: 5d51484289d125e48b3eecf5fbd4d7c9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1713973710326492, guid: 5d51484289d125e48b3eecf5fbd4d7c9, type: 3}
       propertyPath: m_Name
       value: Stone 3 Prefab
@@ -22407,6 +22471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: The fence (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -22734,6 +22802,10 @@ PrefabInstance:
     - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_Name
       value: The fence (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder
@@ -23576,6 +23648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 172682, guid: 12657aa39e8b64040961be7c58d7330c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 445942, guid: 12657aa39e8b64040961be7c58d7330c, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -23785,6 +23861,10 @@ PrefabInstance:
     - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_Name
       value: The fence (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 178312, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 480482, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
       propertyPath: m_RootOrder

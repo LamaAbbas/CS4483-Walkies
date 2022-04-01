@@ -39,7 +39,7 @@ public class Dog : MonoBehaviour {
                 transform.GetChild(0).Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
             } // end if
             else {
-                SceneManager.LoadScene(3); 
+                //SceneManager.LoadScene(3); 
             } 
         }
         else if(other.tag == "PowerUp") {
@@ -52,7 +52,7 @@ public class Dog : MonoBehaviour {
     }
 
     
-
+    // change to horizontal and vertical speed
     public void setSpeed(float _speed){
         speed = _speed;
     } // end method
@@ -60,7 +60,6 @@ public class Dog : MonoBehaviour {
     private void FixedUpdate() {
         // Constant speed 
         //transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);
-        //dog.AddForce(Vector3.forward * speed, ForceMode.VelocityChange);
 
         if (Nimble) {
             // The keys that control the dog and remaining within the boundaries

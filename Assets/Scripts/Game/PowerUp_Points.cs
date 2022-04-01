@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PowerUp_Points : PowerUp
 {
-
     public float powerUpTime = 7;
-//
+
     GameObject target;
     override
     public void ActivatePowerup(GameObject dog){

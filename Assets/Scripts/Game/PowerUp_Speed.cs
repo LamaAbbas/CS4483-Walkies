@@ -12,6 +12,7 @@ public class PowerUp_Speed : PowerUp
         StartCoroutine("LowerSpeed");
     } // end method
 
+    // This will need to be fixed accordingly for horziontal and vertical speeds
     IEnumerator LowerSpeed(){
         target.GetComponent<Dog>().setSpeed(10f);
         yield return new WaitForSeconds(powerUpTime);

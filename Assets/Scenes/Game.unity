@@ -26015,6 +26015,14 @@ PrefabInstance:
       propertyPath: m_Drag
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2624100516704444205, guid: a9108ffe0e3ee5b44ba908bd62a36a47, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624100516704444205, guid: a9108ffe0e3ee5b44ba908bd62a36a47, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2624100516847329141, guid: a9108ffe0e3ee5b44ba908bd62a36a47, type: 3}
       propertyPath: m_Name
       value: Dog Walker
@@ -26062,6 +26070,14 @@ PrefabInstance:
     - target: {fileID: 2624100516847547157, guid: a9108ffe0e3ee5b44ba908bd62a36a47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.308
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581564648729218356, guid: a9108ffe0e3ee5b44ba908bd62a36a47, type: 3}
+      propertyPath: maxRandomTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581564648729218356, guid: a9108ffe0e3ee5b44ba908bd62a36a47, type: 3}
+      propertyPath: minRandomTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9108ffe0e3ee5b44ba908bd62a36a47, type: 3}

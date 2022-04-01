@@ -31,8 +31,8 @@ public class GenerateLevel : MonoBehaviour {
         secNum = Random.Range(0, 4);
         newSection = Instantiate(section[secNum], new Vector3(15.7001f, -261.4271f, zPos), Quaternion.identity);
         
-        secNum = (int)Random.Range(0, 2);
-        if(secNum <= 2){
+        secNum = (int)Random.Range(0, 3);
+        if(secNum <= 3){
             Transform spawn = newSection.transform.Find("PowerUpSpawners").GetChild((int)Random.Range(0, 2));
             Instantiate(powerUps[secNum], new Vector3(spawn.position.x, spawn.position.y, spawn.position.z), Quaternion.identity);
         } // end if

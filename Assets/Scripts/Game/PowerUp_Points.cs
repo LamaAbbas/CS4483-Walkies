@@ -1,12 +1,14 @@
+/**
+ * Khaleel Abdool Mohammed
+ * Group Game Demo
+ * Child class for points power-up
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUp_Points : PowerUp
-{
-
+public class PowerUp_Points : PowerUp {
     public float powerUpTime = 7;
-//
     GameObject target;
     override
     public void ActivatePowerup(GameObject dog){

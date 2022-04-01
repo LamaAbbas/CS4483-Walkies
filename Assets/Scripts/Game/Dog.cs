@@ -1,7 +1,11 @@
 /**
  *      Lama Abbas - 251035313
  *      Individual Game Prototype
- *      Dog class that controls their individual movement
+ *      
+ *      Khaleel Abdool Mohammed
+ *      Group Game Demo
+ *      
+ *      Dog class that controls their individual movement and losing conditions
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -52,7 +56,7 @@ public class Dog : MonoBehaviour {
     }
 
     
-
+    // change to horizontal and vertical speed
     public void setSpeed(float _speed){
         speed = _speed;
     } // end method
@@ -60,7 +64,6 @@ public class Dog : MonoBehaviour {
     private void FixedUpdate() {
         // Constant speed 
         //transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);
-        //dog.AddForce(Vector3.forward * speed, ForceMode.VelocityChange);
 
         if (Nimble) {
             // The keys that control the dog and remaining within the boundaries

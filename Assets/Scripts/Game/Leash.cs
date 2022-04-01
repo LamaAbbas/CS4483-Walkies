@@ -2,6 +2,10 @@
  *      Lama Abbas - 251035313
  *      Individual Game Prototype
  *      Leash class that handles the line renderers appropriately
+ *      
+ *      Brandon Howe
+ *      Group Game Demo
+ *      Affixed leash onto dogs' necks
  */
 
 using System.Collections;

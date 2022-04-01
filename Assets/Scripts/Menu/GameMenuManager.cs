@@ -2,6 +2,10 @@
  *      Lama Abbas - 251035313
  *      Individual Game Prototype
  *      Pause Menu contains everything required to pause and unpause the game
+ *      
+ *      Tom Lu
+ *      Group Game Demo
+ *      Added saving scores and viewing leaderboard to end game
  */
 
 using System.Collections;
@@ -67,12 +71,8 @@ public class GameMenuManager : MonoBehaviour {
 #endif
     }
 
-    // TODO: Make the player lose
-    // At the momment no name means don't save
-    public void EndGame()
-    {
-        if (inputNameUI.text != "")
-        {
+    public void EndGame() {
+        if (inputNameUI.text != "") {
             if (inputNameUI.text.Length > 6) {
                 nameSubstring = inputNameUI.text.Substring(0, 6);
             } else {

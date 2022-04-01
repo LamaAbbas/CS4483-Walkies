@@ -1,3 +1,8 @@
+/**
+ * Lama Abbas
+ * Group Game Demo
+ * Loads game over scene upon end game conditions, and allows saving score and viewing leaderboard
+ */
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;

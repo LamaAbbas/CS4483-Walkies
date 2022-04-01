@@ -1,7 +1,7 @@
 /**
  *      Lama Abbas - 251035313
  *      Individual Game Prototype
- *      LMain menu class adds functionality to menu buttons
+ *      Main menu class adds functionality to menu buttons
  */
 using System.Collections;
 using System.Collections.Generic;

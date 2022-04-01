@@ -1,9 +1,14 @@
+/**
+ * Brandon Howe
+ * Group Game Demo
+ * Adds random sound effects
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayRandomAudio : MonoBehaviour
-{
+public class PlayRandomAudio : MonoBehaviour {
     public AudioClip[] clipsToPlay;
     public float minRandomTime;
     public float maxRandomTime;
@@ -11,14 +16,12 @@ public class PlayRandomAudio : MonoBehaviour
     private AudioSource audioSource;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start()     {
         audioSource = GetComponent<AudioSource>();
         StartCoroutine(WaitToPlayAudio());
     }
 
-    IEnumerator WaitToPlayAudio()
-    {
+    IEnumerator WaitToPlayAudio()     {
         while (true) {
             audioSource.clip = clipsToPlay[Random.Range(0, clipsToPlay.Length)];
             audioSource.Play();

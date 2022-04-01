@@ -1,9 +1,13 @@
+/**
+ * Khaleel Abdool Mohammed
+ * Group Game Demo
+ * Super class for power-ups
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PowerUp : MonoBehaviour
-{
+public abstract class PowerUp : MonoBehaviour {
     GameObject player;
     GameObject nimbleDog;
     GameObject heavyDog;

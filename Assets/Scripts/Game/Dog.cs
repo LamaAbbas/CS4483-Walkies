@@ -1,7 +1,11 @@
 /**
  *      Lama Abbas - 251035313
  *      Individual Game Prototype
- *      Dog class that controls their individual movement
+ *      
+ *      Khaleel Abdool Mohammed
+ *      Group Game Demo
+ *      
+ *      Dog class that controls their individual movement and losing conditions
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -39,7 +43,7 @@ public class Dog : MonoBehaviour {
                 transform.GetChild(0).Find("Shield").gameObject.GetComponent<MeshRenderer>().enabled = false;
             } // end if
             else {
-                //SceneManager.LoadScene(3); 
+                SceneManager.LoadScene(3); 
             } 
         }
         else if(other.tag == "PowerUp") {

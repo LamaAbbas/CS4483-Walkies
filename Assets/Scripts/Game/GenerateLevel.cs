@@ -2,7 +2,10 @@
  *      Lama Abbas - 251035313
  *      Individual Game Prototype
  *      Generate Level class that handles random generation of new sections
- *      * Does not remove older sections, this would be implemented by a queue
+ *      
+ *      Khaleel Abdool Mohammed
+ *      Group Game Demo
+ *      Randomly generates power-ups into the sections
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -32,7 +35,7 @@ public class GenerateLevel : MonoBehaviour {
         newSection = Instantiate(section[secNum], new Vector3(15.7001f, -261.4271f, zPos), Quaternion.identity);
         
         secNum = (int)Random.Range(0, 3);
-        if(secNum <= 3){
+        if(secNum <= 3) {
             Transform spawn = newSection.transform.Find("PowerUpSpawners").GetChild((int)Random.Range(0, 2));
             Instantiate(powerUps[secNum], new Vector3(spawn.position.x, spawn.position.y, spawn.position.z), Quaternion.identity);
         } // end if

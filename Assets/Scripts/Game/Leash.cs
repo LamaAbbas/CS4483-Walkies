@@ -16,7 +16,7 @@ public class Leash : MonoBehaviour {
 
     // The dog that is attached to this leash
     [SerializeField] private Dog Dog;
-    private Transform Neck;
+    [SerializeField] private Transform Neck;
     private LineRenderer lineRenderer;
 
     // Whether the dog walker should get pulled or not
@@ -27,7 +27,8 @@ public class Leash : MonoBehaviour {
 
     private void Start() {
         lineRenderer = GetComponent<LineRenderer>();
-        Neck = Dog.transform.Find("Neck");
+        //Neck = Dog.transform.Find("Neck");
+        //Neck = Dog.transform.parent.GetChild(0).Find("Neck");
     }
 
     private void Update() {

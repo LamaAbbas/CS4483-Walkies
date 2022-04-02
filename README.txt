@@ -27,6 +27,7 @@ Group Game Demo
 - Dog walker is a ragdoll that is manipulated through the environment and leash tugs
 - Leashes are attached from dogs to dog walker and allow physics-based pulling
 - Everything is appropriately contained within the screen
+- Fun day and night cycle
 
 --- How to install ---
 - All executables and required scripts are provided within the zipped directory

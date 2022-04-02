@@ -57,6 +57,7 @@ public static class ScoreData {
 
 }
 
+
 public class ScoreBoardManager : MonoBehaviour {
 
     public TextMeshProUGUI scoreNames;
@@ -72,7 +73,7 @@ public class ScoreBoardManager : MonoBehaviour {
             return;
         }
         data.Sort((item1, item2) => item2.score - item1.score);
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 5; i++) {
             try {
                 scoreNames.text = $"{scoreNames.text}{data[i].name} \n";
                 scoreNums.text = $"{scoreNums.text}{data[i].score} \n";
@@ -83,6 +84,11 @@ public class ScoreBoardManager : MonoBehaviour {
         foreach (LeaderBoardEntry item in data) {
             Debug.Log(item.score + " " + item.name);
         }
+    }
+
+    public void ClearScore() {
+        ScoreData.removeData();
+        Start();
     }
 
     public void Quit() {

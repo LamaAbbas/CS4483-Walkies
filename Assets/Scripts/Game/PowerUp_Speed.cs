@@ -24,9 +24,9 @@ public class PowerUp_Speed : PowerUp {
 
     // This will need to be fixed accordingly for horizontal and vertical speeds
     IEnumerator LowerSpeed(){
-        target.GetComponent<Dog>().setSpeed(1.5f);
+        target.GetComponent<Dog>().setSpeed(40f);
         yield return new WaitForSeconds(powerUpTime);
-        target.GetComponent<Dog>().setSpeed(0.5f);
+        target.GetComponent<Dog>().setSpeed(-40f);
         activate = false;
         Destroy(this.gameObject);
     } // end method

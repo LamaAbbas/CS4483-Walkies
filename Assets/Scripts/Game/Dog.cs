@@ -58,8 +58,8 @@ public class Dog : MonoBehaviour {
     
     // change to horizontal and vertical speed
     public void setSpeed(float _speed){
-        horizontalSpeed *= _speed;
-        verticalSpeed *= _speed;
+        horizontalSpeed += _speed;
+        verticalSpeed += _speed;
     } // end method
 
     private void FixedUpdate() {
